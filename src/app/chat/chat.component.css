@@ -1,0 +1,28 @@
+.example-full-width{
+  width: 95%;
+}
+div{
+  border: 1px solid black;
+}
+mat-list{
+  width: 100%;
+  overflow: scroll;
+  height: 250px;
+}
+mat-icon{
+  color:black;
+  cursor: pointer;
+}
+from{
+  position: fixed;
+  bottom: 0;
+  left: 33%;
+}
+mat-divider{
+  width: 40%;
+    margin-left: 28%;
+}
+.example-form{
+  margin-left: 26%;
+  width: 42%;
+}

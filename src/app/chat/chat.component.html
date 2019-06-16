@@ -1,0 +1,33 @@
+﻿  <h2>Welcome to chat {{currentUser.firstName}} </h2>
+  <h3>Accomdated users in this chat</h3>
+  <ul>
+    <li *ngFor="let user of users">
+        ({{user.firstName}} {{user.lastName}})
+        - <a (click)="removeUser(user.id)" class="text-danger">Block this Person</a>
+    </li>
+  </ul>
+  <div layout="row" layout-xs="column">
+    <div flex>
+  <mat-list>
+    <mat-list-item *ngFor="let message of conversation" >
+      <mat-icon>{{ message.avatar }}</mat-icon>
+      <h3 matLine><b>{{ message.from }} </b></h3>
+      <p matLine>
+        <span>{{ message.content }}</span>
+      </p>
+    </mat-list-item>
+  </mat-list>
+  <mat-divider></mat-divider>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput
+              #message
+              maxlength="150"
+              placeholder="Type a message"
+              (keyup.enter)="addMessageFromUser(message)">
+              <mat-icon (click)="addMessageFromUser(message)"></mat-icon>
+    </mat-form-field>
+  </form>
+  </div>
+  </div>
+
